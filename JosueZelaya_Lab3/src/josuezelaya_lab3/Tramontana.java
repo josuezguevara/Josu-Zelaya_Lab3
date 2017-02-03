@@ -51,7 +51,7 @@ public class Tramontana extends Carro {
 
     @Override
     public String toString() {
-        return "Tramontana{" + "peso=" + peso + ", transmision=" + transmision + '}';
+        return super.toString()+"Tramontana{" + "peso=" + peso + ", transmision=" + transmision + '}';
     }
     
     
