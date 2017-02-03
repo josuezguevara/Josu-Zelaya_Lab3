@@ -13,22 +13,22 @@ import java.util.Date;
  * @author usuario
  */
 public class Maybach extends Carro{
-    private String llantas_respuesto;
+    private int llantas_respuesto;
 
     public Maybach() {
         super();
     }
 
-    public Maybach(String llantas_respuesto, int serie, Date fecha, Color color, String marca_llantas, String polarizado, int velocidad_max, int km_galon, int precio_venta) {
+    public Maybach(int llantas_respuesto, int serie, Date fecha, Color color, String marca_llantas, String polarizado, double velocidad_max, double km_galon, double precio_venta) {
         super(serie, fecha, color, marca_llantas, polarizado, velocidad_max, km_galon, precio_venta);
         this.llantas_respuesto = llantas_respuesto;
     }
 
-    public String getLlantas_respuesto() {
+    public int getLlantas_respuesto() {
         return llantas_respuesto;
     }
 
-    public void setLlantas_respuesto(String llantas_respuesto) {
+    public void setLlantas_respuesto(int llantas_respuesto) {
         this.llantas_respuesto = llantas_respuesto;
     }
 

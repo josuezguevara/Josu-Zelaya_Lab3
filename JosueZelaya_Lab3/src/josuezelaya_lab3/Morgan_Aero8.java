@@ -22,7 +22,7 @@ public class Morgan_Aero8 extends Carro {
     }
 
     
-    public Morgan_Aero8(String convertible, String cabina, int serie, Date fecha, Color color, String marca_llantas, String polarizado, int velocidad_max, int km_galon, int precio_venta) {
+    public Morgan_Aero8(String convertible, String cabina, int serie, Date fecha, Color color, String marca_llantas, String polarizado, double velocidad_max, double km_galon, double precio_venta) {
         super(serie, fecha, color, marca_llantas, polarizado, velocidad_max, km_galon, precio_venta);
         this.convertible = convertible;
         this.cabina = cabina;

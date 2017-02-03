@@ -22,7 +22,7 @@ public class Fisker_Automotive extends Carro {
     }
 
 
-    public Fisker_Automotive(String tipo, String convertible, int serie, Date fecha, Color color, String marca_llantas, String polarizado, int velocidad_max, int km_galon, int precio_venta) {
+    public Fisker_Automotive(String tipo, String convertible, int serie, Date fecha, Color color, String marca_llantas, String polarizado, double velocidad_max, double km_galon, double precio_venta) {
         super(serie, fecha, color, marca_llantas, polarizado, velocidad_max, km_galon, precio_venta);
         this.tipo = tipo;
         this.convertible = convertible;

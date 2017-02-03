@@ -18,14 +18,14 @@ public class Carro {
     private Color color;
     private String marca_llantas;
     private String polarizado;
-    private int velocidad_max;
-    private int km_galon;
-    private int precio_venta;
+    private double velocidad_max;
+    private double km_galon;
+    private double precio_venta;
 
     public Carro() {
     }
 
-    public Carro(int serie, Date fecha, Color color, String marca_llantas, String polarizado, int velocidad_max, int km_galon, int precio_venta) {
+    public Carro(int serie, Date fecha, Color color, String marca_llantas, String polarizado, double velocidad_max, double km_galon, double precio_venta) {
         this.serie = serie;
         this.fecha = fecha;
         this.color = color;
@@ -36,7 +36,7 @@ public class Carro {
         this.precio_venta = precio_venta;
     }
 
-    public int getSerie() {
+    public double getSerie() {
         return serie;
     }
 
@@ -76,27 +76,27 @@ public class Carro {
         this.polarizado = polarizado;
     }
 
-    public int getVelocidad_max() {
+    public double getVelocidad_max() {
         return velocidad_max;
     }
 
-    public void setVelocidad_max(int velocidad_max) {
+    public void setVelocidad_max(double velocidad_max) {
         this.velocidad_max = velocidad_max;
     }
 
-    public int getKm_galon() {
+    public double getKm_galon() {
         return km_galon;
     }
 
-    public void setKm_galon(int km_galon) {
+    public void setKm_galon(double km_galon) {
         this.km_galon = km_galon;
     }
 
-    public int getPrecio_venta() {
+    public double getPrecio_venta() {
         return precio_venta;
     }
 
-    public void setPrecio_venta(int precio_venta) {
+    public void setPrecio_venta(double precio_venta) {
         this.precio_venta = precio_venta;
     }
 
