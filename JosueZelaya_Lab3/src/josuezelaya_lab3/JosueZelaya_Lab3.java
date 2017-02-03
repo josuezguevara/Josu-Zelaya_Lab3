@@ -19,6 +19,7 @@ public class JosueZelaya_Lab3 {
                     + "b- Modificar\n"
                     + "c- Eliminar\n"
                     + "d- Salir!\n");
+//            if 
         }
 
     }
