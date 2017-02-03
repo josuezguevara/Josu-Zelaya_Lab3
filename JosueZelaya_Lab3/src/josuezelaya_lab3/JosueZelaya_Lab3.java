@@ -36,7 +36,7 @@ public class JosueZelaya_Lab3 {
                     if (opcion2.equalsIgnoreCase("a")) {//carros
                         String opcion3 = " ";
                         while (!opcion3.equals("e")) {
-                            opcion3 = JOptionPane.showInputDialog("Que Modelo desea?\n"
+                            opcion3 = JOptionPane.showInputDialog("Que Modelo desea agregar?\n"
                                     + "a.Maybach\n"
                                     + "b.Morgan Aero 8\n"
                                     + "c.Fisker Automotive\n"
@@ -91,7 +91,7 @@ public class JosueZelaya_Lab3 {
                                 } else {
                                     JOptionPane.showMessageDialog(null, "No cumple algunos requisitos");
                                 }
-                                
+
                             }
                             if (opcion3.equalsIgnoreCase("d")) {
                                 double peso = Double.parseDouble(JOptionPane.showInputDialog("Ingrese peso: "));
@@ -111,7 +111,7 @@ public class JosueZelaya_Lab3 {
                                 }
                             }
                         }
-                        
+
                     }
                     if (opcion2.equals("b")) {//personas
                         String opcion4 = " ";
@@ -145,7 +145,7 @@ public class JosueZelaya_Lab3 {
                         }
                     }
                 }
-                
+
             }
             if (opcion.equalsIgnoreCase("b")) {
                 String opcion2 = " ";
@@ -158,13 +158,21 @@ public class JosueZelaya_Lab3 {
                     if (opcion2.equalsIgnoreCase("a")) {//carros
                         String opcion3 = " ";
                         while (!opcion3.equals("e")) {
-                            opcion3 = JOptionPane.showInputDialog("Que Modelo desea?\n"
+                            opcion3 = JOptionPane.showInputDialog("Que Modelo desea modificar?\n"
                                     + "a.Maybach\n"
                                     + "b.Morgan Aero 8\n"
                                     + "c.Fisker Automotive\n"
                                     + "d.Tramontana\n"
                                     + "e.Salir\n");
                             if (opcion3.equalsIgnoreCase("a")) {
+                                String p1 = "";
+                                for (Object t1 : carros) {
+                                    if (t1 instanceof Maybach) {
+                                        p1 += carros.indexOf(t1) + " " + ((Maybach) t1) + "\n";
+                                    }
+
+                                }
+                                JOptionPane.showMessageDialog(null, p1);
                                 int posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion a modificar: "));
                                 int llantas_respuesto = Integer.parseInt(JOptionPane.showInputDialog("Ingrese numero de llantas de respuestos[1 o 2]: "));
                                 int serie = Integer.parseInt(JOptionPane.showInputDialog("Ingrese numero de Serie: "));
@@ -190,9 +198,16 @@ public class JosueZelaya_Lab3 {
                                 } else {
                                     JOptionPane.showMessageDialog(null, "No cumple algunos requisitos");
                                 }
-                                
+
                             }
                             if (opcion3.equalsIgnoreCase("b")) {
+                                String p1 = "";
+                                for (Object t1 : carros) {
+                                    if (t1 instanceof Morgan_Aero8) {
+                                        p1 += carros.indexOf(t1) + " " + ((Morgan_Aero8) t1) + "\n";
+                                    }
+
+                                }
                                 int posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion a modificar: "));
                                 String convertible = JOptionPane.showInputDialog("Ingrese si es convertible o no[si,no]: ");
                                 String cabina = JOptionPane.showInputDialog("Ingrese si es cabina unica o doble: ");
@@ -222,6 +237,13 @@ public class JosueZelaya_Lab3 {
                                 }
                             }
                             if (opcion3.equalsIgnoreCase("c")) {
+                                String p1 = "";
+                                for (Object t1 : carros) {
+                                    if (t1 instanceof Fisker_Automotive) {
+                                        p1 += carros.indexOf(t1) + " " + ((Fisker_Automotive) t1) + "\n";
+                                    }
+
+                                }
                                 int posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion a modificar: "));
                                 String tipo = JOptionPane.showInputDialog("Ingrese si es camioneta o turismo: ");
                                 String convertible = JOptionPane.showInputDialog("Ingrese si es convertible o no lo es[si,,no]: ");
@@ -251,6 +273,13 @@ public class JosueZelaya_Lab3 {
                                 }
                             }
                             if (opcion3.equalsIgnoreCase("d")) {
+                                String p1 = "";
+                                for (Object t1 : carros) {
+                                    if (t1 instanceof Tramontana) {
+                                        p1 += carros.indexOf(t1) + " " + ((Tramontana) t1) + "\n";
+                                    }
+
+                                }
                                 int posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion a modificar: "));
                                 double peso = Double.parseDouble(JOptionPane.showInputDialog("Ingrese peso: "));
                                 double transmision = Double.parseDouble(JOptionPane.showInputDialog("Ingrese transmision de 6 a 7 velocidades: "));
@@ -289,6 +318,13 @@ public class JosueZelaya_Lab3 {
                                     + "b. Clientes\n"
                                     + "c. Salir!\n");
                             if (opcion4.equalsIgnoreCase("a")) {
+                                String p1 = "";
+                                for (Object t1 : personas) {
+                                    if (t1 instanceof Empleados) {
+                                        p1 += personas.indexOf(t1) + " " + ((Empleados) t1) + "\n";
+                                    }
+
+                                }
                                 int posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion a modificar: "));
                                 String nombre = JOptionPane.showInputDialog("Ingrese Nombre: ");
                                 double id = Double.parseDouble(JOptionPane.showInputDialog("Ingrese su ID: "));
@@ -303,11 +339,18 @@ public class JosueZelaya_Lab3 {
                                     ((Empleados) personas.get(posicion)).setAltura(altura);
                                     ((Empleados) personas.get(posicion)).setPeso(peso);
                                     ((Empleados) personas.get(posicion)).setHora_trabajadas(horas);
-                                    
+
                                 }
-                                
+
                             }
                             if (opcion4.equalsIgnoreCase("b")) {
+                                String p1 = "";
+                                for (Object t1 : personas) {
+                                    if (t1 instanceof Clientes) {
+                                        p1 += personas.indexOf(t1) + " " + ((Clientes) t1) + "\n";
+                                    }
+
+                                }
                                 String nombre = JOptionPane.showInputDialog("Ingrese Nombre: ");
                                 double id = Double.parseDouble(JOptionPane.showInputDialog("Ingrese su ID: "));
                                 double edad = Double.parseDouble(JOptionPane.showInputDialog("Ingrese su edad: "));
@@ -328,8 +371,116 @@ public class JosueZelaya_Lab3 {
                     }
                 }
             }
+            if (opcion.equalsIgnoreCase("c")) {//eliminar
+                String opcion2 = " ";
+                while (!opcion2.equals("c")) {
+                    opcion2 = JOptionPane.showInputDialog("\n"
+                            + "Que Desea Eliminar?\n"
+                            + "a. Carros\n"
+                            + "b. Personas\n"
+                            + "c. Salir\n");
+                    if (opcion2.equalsIgnoreCase("a")) {//carros
+                        String opcion3 = " ";
+                        while (!opcion3.equals("e")) {
+                            opcion3 = JOptionPane.showInputDialog("Que Modelo desea modificar?\n"
+                                    + "a.Maybach\n"
+                                    + "b.Morgan Aero 8\n"
+                                    + "c.Fisker Automotive\n"
+                                    + "d.Tramontana\n"
+                                    + "e.Salir\n");
+                            if (opcion3.equalsIgnoreCase("a")) {
+                                String p1 = "";
+                                for (Object t1 : carros) {
+                                    if (t1 instanceof Maybach) {
+                                        p1 += carros.indexOf(t1) + " " + ((Maybach) t1) + "\n";
+                                    }
+
+                                }
+                                int pos = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion a eliminar: "));
+                                if (carros.get(pos) instanceof Maybach) {
+                                    carros.remove(pos);
+                                }
+                            }
+                            if (opcion3.equalsIgnoreCase("b")) {
+                                String p1 = "";
+                                for (Object t1 : carros) {
+                                    if (t1 instanceof Morgan_Aero8) {
+                                        p1 += carros.indexOf(t1) + " " + ((Morgan_Aero8) t1) + "\n";
+                                    }
+
+                                }
+                                int pos = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion a eliminar: "));
+                                if (carros.get(pos) instanceof Morgan_Aero8) {
+                                    carros.remove(pos);
+                                }
+                            }
+                            if (opcion3.equalsIgnoreCase("c")) {
+                                String p1 = "";
+                                for (Object t1 : carros) {
+                                    if (t1 instanceof Fisker_Automotive) {
+                                        p1 += carros.indexOf(t1) + " " + ((Fisker_Automotive) t1) + "\n";
+                                    }
+
+                                }
+                                int pos = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion a eliminar: "));
+                                if (carros.get(pos) instanceof Fisker_Automotive) {
+                                    carros.remove(pos);
+                                }
+                            }
+                            if (opcion3.equalsIgnoreCase("d")) {
+                                String p1 = "";
+                                for (Object t1 : carros) {
+                                    if (t1 instanceof Tramontana) {
+                                        p1 += carros.indexOf(t1) + " " + ((Tramontana) t1) + "\n";
+                                    }
+
+                                }
+                                int pos = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion a eliminar: "));
+                                if (carros.get(pos) instanceof Tramontana) {
+                                    carros.remove(pos);
+                                }
+                            }
+                        }
+                    }
+                    if (opcion2.equalsIgnoreCase("b")) {
+                        String opcion4 = " ";
+                        while (!opcion.equalsIgnoreCase("c")) {
+                            opcion4 = JOptionPane.showInputDialog("Que tipo de persona desea modificar:? \n"
+                                    + "a. Empleados\n"
+                                    + "b. Clientes\n"
+                                    + "c. Salir!\n");
+                            if (opcion4.equalsIgnoreCase("a")) {
+                                String p1 = "";
+                                for (Object t1 : personas) {
+                                    if (t1 instanceof Empleados) {
+                                        p1 += personas.indexOf(t1) + " " + ((Empleados) t1) + "\n";
+                                    }
+
+                                }
+                                int pos = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion a eliminar: "));
+                                if (personas.get(pos) instanceof Empleados) {
+                                    personas.remove(pos);
+                                }
+                            }
+                            if (opcion4.equalsIgnoreCase("b")) {
+                                String p1 = "";
+                                for (Object t1 : personas) {
+                                    if (t1 instanceof Clientes) {
+                                        p1 += personas.indexOf(t1) + " " + ((Clientes) t1) + "\n";
+                                    }
+
+                                }
+                                int pos = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion a eliminar: "));
+                                if (personas.get(pos) instanceof Clientes) {
+                                    personas.remove(pos);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
-        
+
     }
-    
+
 }
